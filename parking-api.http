@@ -1,0 +1,41 @@
+### Initialize Parking Lot
+POST http://localhost:3000/parking_lot
+Content-Type: application/json
+
+{
+  "no_of_slot": 6
+}
+
+### Park a car
+POST http://localhost:3000/park
+Content-Type: application/json
+
+{
+  "car_reg_no": "KA-01-HH-1234",
+  "car_color": "white"
+}
+
+### Get status
+GET http://localhost:3000/status
+
+### Get cars by color
+GET http://localhost:3000/registration_numbers/white
+
+### Clear slot by number
+POST http://localhost:3000/clear
+Content-Type: application/json
+
+{
+  "slot_number": 1
+}
+
+### Get statistics
+GET http://localhost:3000/statistics
+
+### Expand parking lot
+PATCH http://localhost:3000/parking_lot
+Content-Type: application/json
+
+{
+  "increment_slot": 3
+}
